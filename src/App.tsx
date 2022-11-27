@@ -1,13 +1,16 @@
 import React from 'react';
 
 import ThreeScene from "./components/ThreeScene";
+import Info from "./components/Info";
 
-import {Wrapper} from "./styles/App.styles";
+import {Wrapper, GlobalStyle} from "./styles/App.styles";
 
 function App() {
   return (
     <Wrapper className="App">
-      <ThreeScene/>
+        <GlobalStyle/>
+        <Info/>
+        <ThreeScene/>
     </Wrapper>
   );
 }
