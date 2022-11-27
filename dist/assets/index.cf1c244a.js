@@ -3307,7 +3307,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   span {
     margin-left: 10px;
   }
-`,TX=()=>I(CX,{children:I("h1",{children:"Low Poly City"})}),RX=()=>Ue(EX,{children:[Ue("span",{children:["Model author: ",I("a",{href:"https://sketchfab.com/antonmoek",target:"_blank",children:"antonmoek"})]}),Ue("span",{children:["License: ",I("a",{href:"http://creativecommons.org/licenses/by/4.0/",target:"_blank",children:"CC-BY-4.0"})]})]}),PX=()=>Ue(_s,{children:[I(TX,{}),I(RX,{})]}),BX="/assets/GnuUnifontFull.67cfd64c.woff2",IX=bX`
+`,TX=()=>I(CX,{children:I("h1",{children:"Low Poly City"})}),RX=()=>Ue(EX,{children:[Ue("span",{children:["Model author: ",I("a",{href:"https://sketchfab.com/antonmoek",target:"_blank",children:"antonmoek"})]}),Ue("span",{children:["License: ",I("a",{href:"http://creativecommons.org/licenses/by/4.0/",target:"_blank",children:"CC-BY-4.0"})]})]}),PX=()=>Ue(_s,{children:[I(TX,{}),I(RX,{})]}),BX="/three-ts-city/assets/GnuUnifontFull.67cfd64c.woff2",IX=bX`
   @font-face {
     font-family: 'GnuUnifontFull';
     src: local('GnuUnifontFull'), url(${BX}) format('woff2');
