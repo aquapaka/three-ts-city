@@ -129,7 +129,7 @@ export function SmallCityModel(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('small_city/scene.gltf') as unknown as GLTFResult;
 
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} scale={0.1}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group position={[-397.59, -77.16, -513.34]} rotation={[Math.PI, 0.89, 2.54]} />

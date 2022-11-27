@@ -5,11 +5,11 @@ import {useControls} from "leva";
 import {SmallCityModel} from "./SmallCityModel";
 import Plot from "./Plot";
 // Types
-import CameraController, {CameraControllerType} from "./CameraController";
+import CameraController, {CameraType} from "./CameraController";
 
 const ThreeScene = () => {
 
-    const { backgroundColor, ambientLight, directionalLightPos, firstPersonCamera} = useControls({
+    const { backgroundColor, ambientLight, directionalLightPos, perspectiveCamera} = useControls({
         backgroundColor: '#6bd5fa',
         ambientLight: { value: 0.1, min: 0, max: 1 },
         directionalLightPos: {
@@ -17,19 +17,20 @@ const ThreeScene = () => {
             y: 200,
             z: 300
         },
-        firstPersonCamera: false,
+        perspectiveCamera: false,
     })
 
     return (
         <Canvas>
-            <CameraController cameraControllerType={firstPersonCamera ? CameraControllerType.FIRST_PERSON_CAMERA : CameraControllerType.MAP_VIEW_CAMERA}/>
+            <CameraController cameraType={perspectiveCamera ? CameraType.PERSPECTIVE_CAMERA : CameraType.ORTHOGRAPHIC_CAMERA}/>
 
             <directionalLight position={[directionalLightPos.x, directionalLightPos.y, directionalLightPos.z]}/>
             <ambientLight intensity={ambientLight}/>
             <color attach="background" args={[backgroundColor]} />
 
+            {/*<Plot/>*/}
             <Suspense fallback={null}>
-                <SmallCityModel position={[-20,0,40]}/>
+                <SmallCityModel position={[45,0,45]}/>
             </Suspense>
         </Canvas>
     );
