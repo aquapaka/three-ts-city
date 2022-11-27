@@ -1,21 +1,29 @@
-import {OrbitControls, OrthographicCamera, PerspectiveCamera, PointerLockControls} from "@react-three/drei";
+import {
+    OrbitControls,
+    OrthographicCamera,
+    PerspectiveCamera,
+    PointerLockControls
+} from "@react-three/drei";
 import React from "react";
 
-export enum CameraControllerType {
-    MAP_VIEW_CAMERA,
-    FIRST_PERSON_CAMERA
+export enum CameraType {
+    ORTHOGRAPHIC_CAMERA,
+    PERSPECTIVE_CAMERA
 }
 
 type Props = {
-    cameraControllerType: CameraControllerType
+    cameraType: CameraType
 }
 
-const CameraController: React.FC<Props> = ({cameraControllerType}) => {
+const CameraController: React.FC<Props> = ({cameraType}) => {
+
+    console.log(cameraType);
 
     return (
         <>
-            <OrthographicCamera makeDefault={cameraControllerType === CameraControllerType.MAP_VIEW_CAMERA} position={[100, 50, 100]} near={0.1} far={1000} zoom={80}/>
-            <OrbitControls/>
+            <OrthographicCamera makeDefault={cameraType === CameraType.ORTHOGRAPHIC_CAMERA} position={[200, 100, 200]} near={0} far={1000} zoom={4}/>
+            <PerspectiveCamera makeDefault={cameraType === CameraType.PERSPECTIVE_CAMERA} position={[200, 100, 200]} near={1} far={1000} fov={50}/>
+            <OrbitControls />
         </>
     )
 }
