@@ -2,7 +2,6 @@ import {
     OrbitControls,
     OrthographicCamera,
     PerspectiveCamera,
-    PointerLockControls
 } from "@react-three/drei";
 import React from "react";
 
@@ -16,8 +15,6 @@ type Props = {
 }
 
 const CameraController: React.FC<Props> = ({cameraType}) => {
-
-    console.log(cameraType);
 
     return (
         <>
